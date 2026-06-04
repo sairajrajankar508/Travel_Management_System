@@ -70,33 +70,39 @@ Requests can be **REJECTED**, **CANCELLED**, or **DISMISSED** at any review stag
 
 ## Project Structure
 
-Travel_Management_System/
-├── Backend/
-│   ├── src/main/java/com/travel/
-│   │   ├── config/           # Security, file upload, data initializer
-│   │   ├── controller/       # REST controllers (Auth, Admin, Employee, Manager, Finance, Itinerary, Policy, AuditLog)
-│   │   ├── dto/              # Request/Response DTOs
-│   │   ├── entity/           # JPA entities (User, TravelRequest, Expense, Itinerary, TravelPolicy, AuditLog)
-│   │   ├── enums/            # Enums (Role, RequestStatus, ExpenseStatus, ExpenseCategory)
-│   │   ├── repository/       # JPA repositories
-│   │   ├── service/          # Business logic services
-│   │   └── util/             # JWT utility & filter
-│   ├── src/main/resources/
-│   │   └── application.properties
-│   └── pom.xml
-├── Frontend/
-│   ├── src/
-│   │   ├── app/              # Redux store
-│   │   ├── components/       # Layout components (Navbar, Sidebars)
-│   │   ├── features/         # Redux slices (auth)
-│   │   ├── layouts/          # Dashboard layout
-│   │   ├── pages/            # Pages grouped by role (admin/, employee/, manager/, finance/)
-│   │   ├── routes/           # ProtectedRoute guard
-│   │   └── services/         # Axios API client
-│   ├── package.json
-│   └── vite.config.js
-└── README.md
+## Project Structure
 
+### Backend
+
+| Directory | Description |
+|-----------|-------------|
+| `src/main/java/com/travel/config/` | Security, file upload, data initializer configuration |
+| `src/main/java/com/travel/controller/` | REST controllers (Auth, Admin, Employee, Manager, Finance, Itinerary, Policy, AuditLog) |
+| `src/main/java/com/travel/dto/` | Request/Response DTOs |
+| `src/main/java/com/travel/entity/` | JPA entities (User, TravelRequest, Expense, Itinerary, TravelPolicy, AuditLog) |
+| `src/main/java/com/travel/enums/` | Enums (Role, RequestStatus, ExpenseStatus, ExpenseCategory) |
+| `src/main/java/com/travel/repository/` | JPA repositories |
+| `src/main/java/com/travel/service/` | Business logic services |
+| `src/main/java/com/travel/util/` | JWT utility & filter |
+| `src/main/resources/` | `application.properties` |
+| `pom.xml` | Maven project configuration |
+
+### Frontend
+
+| Directory | Description |
+|-----------|-------------|
+| `src/app/` | Redux store configuration |
+| `src/components/` | Layout components (Navbar, Sidebars) |
+| `src/features/` | Redux slices (auth) |
+| `src/layouts/` | Dashboard layout |
+| `src/pages/admin/` | Admin pages (Dashboard, User Mgmt, Policy Mgmt, Travel Requests, Reports, Audit Logs, Profile) |
+| `src/pages/employee/` | Employee pages (Dashboard, Travel Requests, Itineraries, Expenses, Reimbursements, History, Profile) |
+| `src/pages/manager/` | Manager pages (Dashboard, Pending Approvals, Team Requests, Team History, Reports, Profile) |
+| `src/pages/finance/` | Finance pages (Dashboard, Travel Requests, Pending Approvals, Expenses, Reimbursements, Reports, Profile) |
+| `src/routes/` | ProtectedRoute guard |
+| `src/services/` | Axios API client |
+| `package.json` | Dependencies & scripts |
+| `vite.config.js` | Vite configuration |
 
 ## Getting Started
 
